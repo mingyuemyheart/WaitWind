@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2bade9</color>
+    <color name="colorPrimaryDark">#2bade9</color>
+    <color name="colorAccent">#d9d9d9</color>
+
+    <color name="text_color1">#F0F0F0</color>
+    <color name="text_color2">#A3A7AC</color>
+    <color name="text_color3">#3b3c3d</color>
+    <color name="text_color4">#707372</color>
+    <color name="light_pink">#ffd5d5</color>
+    <color name="light_blue">#c1e7ff</color>
+    <color name="light_gray">#dbdee3</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#80000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#5A5A5A</color>
+    <color name="blue">#8ad4ff</color>
+    <color name="yellow">#fff139</color>
+    <color name="orange">#fd8612</color>
+    <color name="red">#FF0033</color>
+    
+    <color name="title_bg">#2bade9</color>
+    <color name="main_color">#353C48</color>
+    <color name="cell_default">#00000000</color>
+    <color name="cell_pressed">#30ffffff</color>
+    
+</resources>

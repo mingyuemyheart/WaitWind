@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFFAFE"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/reTitle"
+        layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_name"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/level_3" />
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/tvName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/level_4" />
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tvVersion"
+                android:layout_marginTop="10dp"
+                android:background="#302bade9" />
+
+            <LinearLayout
+                android:id="@+id/llAddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司官网："
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/level_4" />
+
+                <TextView
+                    android:id="@+id/tvAddr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="http://www.tianqi.cn/"
+                    android:textColor="@color/title_bg"
+                    android:textSize="@dimen/level_4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/llAddr"
+                android:background="#302bade9" />
+
+            <LinearLayout
+                android:id="@+id/llHot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:gravity="center_vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务热线："
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/level_4" />
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="010-68408068"
+                    android:textColor="@color/title_bg"
+                    android:textSize="@dimen/level_4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/llHot"
+                android:background="#302bade9" />
+
+            <TextView
+                android:id="@+id/tvCopyRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/copyright"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/level_4" />
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tvCopyRight"
+                android:background="#302bade9" />
+
+            <TextView
+                android:id="@+id/tvResource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line4"
+                android:padding="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/data_resource"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/level_4" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

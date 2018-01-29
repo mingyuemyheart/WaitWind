@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/reMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/corner_title_bg"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tvHour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_left_title_bg"
+                android:gravity="center"
+                android:text="@string/percent_hour"
+                android:textColor="@color/white"
+                android:textSize="@dimen/level_4" />
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_right_white"
+                android:gravity="center"
+                android:text="@string/seven_days"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/level_4" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reBottom"
+            android:layout_below="@+id/ll1"
+            android:layout_centerHorizontal="true"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/llContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/llContainer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reBottom"
+            android:layout_below="@+id/ll1"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/reBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f2f2f2"
+            android:paddingBottom="10dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/title_bg" />
+
+            <ImageView
+                android:id="@+id/ivTag"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/iv_tag" />
+
+            <LinearLayout
+                android:id="@+id/llPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivTag"
+                android:layout_marginRight="100dp"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tvPrompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前提示："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/level_4" />
+
+                <TextView
+                    android:id="@+id/tvAqiText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/aqi0_text"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/level_5" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/reAqi"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ivTag"
+                android:layout_margin="20dp"
+                android:background="@drawable/circle_zero"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tvAqi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="30"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/level_3" />
+
+                <TextView
+                    android:id="@+id/tvAqiText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAqi"
+                    android:layout_centerHorizontal="true"
+                    android:text="优"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/level_5" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/no_pollution_data"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/level_4"
+        android:visibility="gone" />
+
+</RelativeLayout>

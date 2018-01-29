@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    //png图片命名带有数字则编译不通过使用一下声明
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    //apache使用声明
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.waitwind"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 110
+        versionName "1.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'armeabi', 'x86'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    //打包，自动追加版本号、名称
+//    android.applicationVariants.all {
+//        variant ->
+//            variant.outputs.all {
+//                output -> output.outputFile = new File(output.outputFile.parent, "WaitWind" + "_" + defaultConfig.versionCode + "_V" + defaultConfig.versionName + "_" + buildType.name + ".apk");
+//            }
+//    }
+
+    android.applicationVariants.all {
+        variant ->
+        variant.outputs.all {
+            outputFileName = "WaitWind" + "_" + "${defaultConfig.versionCode}" + "_V" + "${defaultConfig.versionName}" + "_" + buildType.name + ".apk"
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile files('libs/scenefinal.jar')
+    implementation files('libs/ChinaWeatherAPI.jar')
+    implementation files('libs/okhttp-3.8.1.jar')
+    implementation files('libs/okio-1.13.0.jar')
+    implementation files('libs/AMap3DMap_5.7.0_AMapSearch_5.7.0_AMapLocation_3.7.0_20171229.jar')
+    implementation files('libs/SocialSDK_QQ_Simplify.jar')
+    implementation files('libs/SocialSDK_sms.jar')
+    implementation files('libs/SocialSDK_WeChat_Simplify.jar')
+    implementation files('libs/umeng_shareboard_widget.jar')
+    implementation files('libs/umeng_social_api.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/umeng_social_shareboard.jar')
+    implementation files('libs/umeng_social_tool.jar')
+}

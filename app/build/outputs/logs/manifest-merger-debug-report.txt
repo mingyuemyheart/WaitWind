@@ -1,0 +1,395 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+	package
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:3:5-27
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:1-146:12
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:10:22-72
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:11:22-73
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:14:22-65
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:15:5-73
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:15:22-70
+uses-permission#android.permission.CAMERA
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:16:5-65
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:16:22-62
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:17:5-69
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:17:22-66
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:20:5-80
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:20:22-77
+uses-permission#android.permission.READ_LOGS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:21:5-68
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:21:22-65
+uses-permission#android.permission.GET_TASKS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:22:22-65
+uses-permission#android.permission.SET_DEBUG_APP
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:23:5-72
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:23:22-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:24:5-78
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:24:22-75
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:25:5-71
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:25:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:26:5-74
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:26:22-71
+uses-permission#android.permission.MANAGE_ACCOUNTS
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:27:5-74
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:27:22-71
+uses-permission#android.permission.BROADCAST_PACKAGE_ADDED
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:28:5-82
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:28:22-79
+uses-permission#android.permission.BROADCAST_PACKAGE_CHANGED
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:29:5-84
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:29:22-81
+uses-permission#android.permission.BROADCAST_PACKAGE_INSTALL
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:30:5-84
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:30:22-81
+uses-permission#android.permission.BROADCAST_PACKAGE_REPLACED
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:31:5-85
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:31:22-82
+uses-permission#android.permission.RESTART_PACKAGES
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:32:5-75
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:32:22-72
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:33:5-81
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:33:22-78
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:34:5-79
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:34:22-76
+application
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:38:5-144:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:42:9-41
+	android:icon
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:41:9-38
+	android:allowBackup
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:40:9-35
+	android:theme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:43:9-40
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:39:9-58
+receiver#com.waitwind.utils.AutoUpdateBroadcastReceiver
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:46:9-51:20
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:46:19-80
+intent-filter#android.intent.action.DOWNLOAD_COMPLETE+android.intent.action.PACKAGE_INSTALL
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.DOWNLOAD_COMPLETE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:48:17-82
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:48:25-79
+action#android.intent.action.PACKAGE_INSTALL
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:49:17-80
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:49:25-77
+meta-data#com.amap.api.v2.apikey
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:53:9-55:64
+	android:value
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:55:13-61
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:54:13-50
+service#com.amap.api.location.APSService
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:58:6-65
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:58:15-62
+activity#com.waitwind.activity.WelcomeActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:60:9-69:20
+	android:label
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:63:13-45
+	android:theme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:62:13-71
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:61:13-65
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:64:13-68:29
+action#android.intent.action.MAIN
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:65:17-69
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:65:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:67:17-77
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:67:27-74
+activity#com.waitwind.activity.GuideActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:71:9-74:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:74:13-49
+	android:theme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:73:13-71
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:72:13-63
+activity#com.waitwind.activity.MainActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:76:9-79:86
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:78:13-49
+	android:configChanges
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:79:13-83
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:77:13-62
+activity#com.waitwind.activity.WeatherActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:81:9-83:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:83:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:82:13-65
+activity#com.waitwind.activity.CameraAqiActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:85:9-87:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:87:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:86:13-67
+activity#com.waitwind.activity.RankActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:89:9-91:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:91:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:90:13-62
+activity#com.waitwind.activity.AboutActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:93:9-95:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:95:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:94:13-63
+activity#com.waitwind.activity.WebViewActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:97:9-99:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:99:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:98:13-65
+activity#com.waitwind.activity.FeedBackActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:101:9-103:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:103:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:102:13-66
+activity#com.waitwind.activity.CitySearchActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:105:9-107:52
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:107:13-49
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:106:13-68
+meta-data#UMENG_APPKEY
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:111:9-113:56
+	android:value
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:113:13-53
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:112:13-40
+activity#com.waitwind.wxapi.WXEntryActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:116:9-121:75
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:120:13-49
+	android:exported
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:119:13-36
+	android:configChanges
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:118:13-74
+	android:theme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:121:13-72
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:117:13-50
+activity#com.umeng.qq.tencent.AuthActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:124:9-136:20
+	android:launchMode
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:126:13-44
+	android:noHistory
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:127:13-37
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:125:13-61
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:128:13-135:29
+action#android.intent.action.VIEW
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:129:17-69
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:129:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:131:17-76
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:131:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:132:17-78
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:132:27-75
+data
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:134:17-60
+	android:scheme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:134:23-57
+activity#com.umeng.qq.tencent.AssistActivity
+ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:137:9-141:75
+	android:screenOrientation
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:140:13-49
+	android:configChanges
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:139:13-74
+	android:theme
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:141:13-72
+	android:name
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml:138:13-63
+uses-sdk
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shawn/AndroidStudioProjects/WaitWind/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b6ae77af2646c1b44972c7cfe029133d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/80b9dafba58711e33dc350927b0ea4be/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/aa3f8b7d2604c251d7d92db1fe06304d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/c58edffb561875702a01e5f1751955a5/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8b2d1f820c18dc0a0252f22caae63bf4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/064468936e40e79b32deb11e334e5866/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/259851aa60a196524f22fc243ae7473b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9cf7dfd4eed27fb895d68e71c8fcc302/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6b539cdc7675d3c090fa0639bc6e3f07/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shawn/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c5901706e05f8e64443390fe7f903db7/AndroidManifest.xml:26:13-58
