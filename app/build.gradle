@@ -30,13 +30,6 @@ android {
     }
 
     //打包，自动追加版本号、名称
-//    android.applicationVariants.all {
-//        variant ->
-//            variant.outputs.all {
-//                output -> output.outputFile = new File(output.outputFile.parent, "WaitWind" + "_" + defaultConfig.versionCode + "_V" + defaultConfig.versionName + "_" + buildType.name + ".apk");
-//            }
-//    }
-
     android.applicationVariants.all {
         variant ->
         variant.outputs.all {
