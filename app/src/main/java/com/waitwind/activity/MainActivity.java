@@ -67,6 +67,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.Date;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -283,9 +284,7 @@ InfoWindowAdapter, OnMapClickListener, OnInfoWindowClickListener, OnGeocodeSearc
 										}
 									}
 
-									windView = new WindView(mContext, MainActivity.this, CONST.windData);
-									container.removeAllViews();
-									container.addView(windView);
+									reloadWind();
 
 									ivSearch.setVisibility(View.VISIBLE);
 									ivShare.setVisibility(View.VISIBLE);
@@ -421,25 +420,40 @@ InfoWindowAdapter, OnMapClickListener, OnInfoWindowClickListener, OnGeocodeSearc
 		if (marker != null) {
 			marker.hideInfoWindow();
 		}
+		container.removeAllViews();
+		container2.removeAllViews();
 	}
 
 	@Override
 	public void onCameraChangeFinish(CameraPosition arg0) {
 		reloadWind();
 	}
-	
+
+	long t = new Date().getTime();
+
 	/**
 	 * 重新加载风场
 	 */
 	private void reloadWind() {
-		if (windView != null) {
-			LatLng latLngStart = aMap.getProjection().fromScreenLocation(new Point(0, 0));
-			LatLng latLngEnd = aMap.getProjection().fromScreenLocation(new Point(width, height));
-			CONST.windData.latLngStart = latLngStart;
-			CONST.windData.latLngEnd = latLngEnd;
-			container.removeAllViews();
-			container.addView(windView);
+		t = new Date().getTime() - t;
+		if (t < 1000) {
+			return;
 		}
+
+		LatLng latLngStart = aMap.getProjection().fromScreenLocation(new Point(0, 0));
+		LatLng latLngEnd = aMap.getProjection().fromScreenLocation(new Point(width, height));
+		CONST.windData.latLngStart = latLngStart;
+		CONST.windData.latLngEnd = latLngEnd;
+		if (windView == null) {
+			windView = new WindView(mContext);
+			windView.init(MainActivity.this);
+			windView.setData(CONST.windData);
+			windView.start();
+			windView.invalidate();
+		}
+
+		container.removeAllViews();
+		container.addView(windView);
 	}
 	
 	/**

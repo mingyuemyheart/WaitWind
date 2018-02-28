@@ -13,8 +13,8 @@ android {
         applicationId "com.waitwind"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 110
-        versionName "1.1.0"
+        versionCode 111
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
