@@ -67,6 +67,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import okhttp3.Call;
@@ -100,6 +101,7 @@ InfoWindowAdapter, OnMapClickListener, OnInfoWindowClickListener, OnGeocodeSearc
 	private ImageView ivShare = null;
 	private long mExitTime;//记录点击完返回按钮后的long型时间
 	private RelativeLayout reContent = null;
+	private SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMddHH");
 	
 	//marker infowindow
 	private TextView tvDes = null;
@@ -230,77 +232,82 @@ InfoWindowAdapter, OnMapClickListener, OnInfoWindowClickListener, OnGeocodeSearc
 	/**
 	 * 异步请求
 	 */
-	private void OkHttpWind(String url) {
-		OkHttpUtil.enqueue(new Request.Builder().url(url).build(), new Callback() {
+	private void OkHttpWind(final String url) {
+		new Thread(new Runnable() {
 			@Override
-			public void onFailure(Call call, IOException e) {
-
-			}
-
-			@Override
-			public void onResponse(Call call, Response response) throws IOException {
-				if (!response.isSuccessful()) {
-					return;
-				}
-				final String result = response.body().string();
-				runOnUiThread(new Runnable() {
+			public void run() {
+				OkHttpUtil.enqueue(new Request.Builder().url(url).build(), new Callback() {
 					@Override
-					public void run() {
-						if (!TextUtils.isEmpty(result)) {
-							try {
-								JSONObject obj = new JSONObject(result);
-								if (obj != null) {
-									if (!obj.isNull("gridHeight")) {
-										CONST.windData.height = obj.getInt("gridHeight");
-									}
-									if (!obj.isNull("gridWidth")) {
-										CONST.windData.width = obj.getInt("gridWidth");
-									}
-									if (!obj.isNull("x0")) {
-										CONST.windData.x0 = obj.getDouble("x0");
-									}
-									if (!obj.isNull("y0")) {
-										CONST.windData.y0 = obj.getDouble("y0");
-									}
-									if (!obj.isNull("x1")) {
-										CONST.windData.x1 = obj.getDouble("x1");
-									}
-									if (!obj.isNull("y1")) {
-										CONST.windData.y1 = obj.getDouble("y1");
-									}
+					public void onFailure(Call call, IOException e) {
 
-									LatLng latLngStart = aMap.getProjection().fromScreenLocation(new Point(0, 0));
-									LatLng latLngEnd = aMap.getProjection().fromScreenLocation(new Point(width, height));
-									CONST.windData.latLngStart = latLngStart;
-									CONST.windData.latLngEnd = latLngEnd;
+					}
 
-									if (!obj.isNull("field")) {
-										JSONArray array = new JSONArray(obj.getString("field"));
-										for (int i = 0; i < array.length(); i+=2) {
-											WindDto dto2 = new WindDto();
-											dto2.initX = (float)(array.optDouble(i));
-											dto2.initY = (float)(array.optDouble(i+1));
-											CONST.windData.dataList.add(dto2);
-										}
-									}
-
-									reloadWind();
-
-									ivSearch.setVisibility(View.VISIBLE);
-									ivShare.setVisibility(View.VISIBLE);
-									ivLocation.setVisibility(View.VISIBLE);
-//						ivExpand.setVisibility(View.VISIBLE);
-									startLocation();
-									cancelDialog();
-								}
-							} catch (JSONException e1) {
-								e1.printStackTrace();
-							}
+					@Override
+					public void onResponse(Call call, Response response) throws IOException {
+						if (!response.isSuccessful()) {
+							return;
 						}
+						final String result = response.body().string();
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								if (!TextUtils.isEmpty(result)) {
+									try {
+										JSONObject obj = new JSONObject(result);
+										if (obj != null) {
+											if (!obj.isNull("gridHeight")) {
+												CONST.windData.height = obj.getInt("gridHeight");
+											}
+											if (!obj.isNull("gridWidth")) {
+												CONST.windData.width = obj.getInt("gridWidth");
+											}
+											if (!obj.isNull("x0")) {
+												CONST.windData.x0 = obj.getDouble("x0");
+											}
+											if (!obj.isNull("y0")) {
+												CONST.windData.y0 = obj.getDouble("y0");
+											}
+											if (!obj.isNull("x1")) {
+												CONST.windData.x1 = obj.getDouble("x1");
+											}
+											if (!obj.isNull("y1")) {
+												CONST.windData.y1 = obj.getDouble("y1");
+											}
+
+											LatLng latLngStart = aMap.getProjection().fromScreenLocation(new Point(0, 0));
+											LatLng latLngEnd = aMap.getProjection().fromScreenLocation(new Point(width, height));
+											CONST.windData.latLngStart = latLngStart;
+											CONST.windData.latLngEnd = latLngEnd;
+
+											if (!obj.isNull("field")) {
+												JSONArray array = new JSONArray(obj.getString("field"));
+												for (int i = 0; i < array.length(); i+=2) {
+													WindDto dto2 = new WindDto();
+													dto2.initX = (float)(array.optDouble(i));
+													dto2.initY = (float)(array.optDouble(i+1));
+													CONST.windData.dataList.add(dto2);
+												}
+											}
+
+											reloadWind();
+
+											ivSearch.setVisibility(View.VISIBLE);
+											ivShare.setVisibility(View.VISIBLE);
+											ivLocation.setVisibility(View.VISIBLE);
+//						ivExpand.setVisibility(View.VISIBLE);
+											startLocation();
+											cancelDialog();
+										}
+									} catch (JSONException e1) {
+										e1.printStackTrace();
+									}
+								}
+							}
+						});
 					}
 				});
 			}
-		});
+		}).start();
 	}
 	
 	/**
@@ -459,170 +466,167 @@ InfoWindowAdapter, OnMapClickListener, OnInfoWindowClickListener, OnGeocodeSearc
 	/**
 	 * 异步请求
 	 */
-	private void OkHttpDetail(String url) {
+	private void OkHttpDetail(final String url) {
 		progressBar.setVisibility(View.VISIBLE);
 		llMarkView.setVisibility(View.INVISIBLE);
-		OkHttpUtil.enqueue(new Request.Builder().url(url).build(), new Callback() {
+		new Thread(new Runnable() {
 			@Override
-			public void onFailure(Call call, IOException e) {
-
-			}
-
-			@Override
-			public void onResponse(Call call, Response response) throws IOException {
-				if (!response.isSuccessful()) {
-					return;
-				}
-				final String result = response.body().string();
-				runOnUiThread(new Runnable() {
+			public void run() {
+				OkHttpUtil.enqueue(new Request.Builder().url(url).build(), new Callback() {
 					@Override
-					public void run() {
-						if (!TextUtils.isEmpty(result)) {
-							try {
-								JSONObject obj = new JSONObject(result);
-								if (obj != null) {
-									if (!obj.isNull("air")) {
-										JSONObject airObj = new JSONObject(obj.getString("air"));
-										if (!airObj.isNull("k")) {
-											JSONObject kObj = new JSONObject(airObj.getString("k"));
-											if (!kObj.isNull("k3")) {
-//									String[] k3Array = kObj.getString("k3").split("\\|");
-//									CONST.data.aqiList.clear();
-//									for (int i = 0; i < k3Array.length; i++) {
-//										WeatherData kDto = new WeatherData();
-//										kDto.aqi = k3Array[i];
-//										CONST.data.aqiList.add(kDto);
-//									}
-												if (tvAqi != null) {
-													String aqi = WeatherUtil.lastValue(kObj.getString("k3"));
-													if (!TextUtils.isEmpty(aqi)) {
-														tvAqi.setText(aqi + " " + WeatherUtil.getAqi(mContext, Integer.valueOf(aqi)));
-														tvAqi.setBackgroundResource(WeatherUtil.getAqiBg(mContext, Integer.valueOf(aqi)));
-														CONST.data.aqi = aqi;
-													}
-												}
+					public void onFailure(Call call, IOException e) {
 
-												if (tvFactAqi != null) {
-													String aqi = WeatherUtil.lastValue(kObj.getString("k3"));
-													if (!TextUtils.isEmpty(aqi)) {
-														tvFactAqi.setText(aqi);
-														tvFactAqi.setBackgroundResource(WeatherUtil.getAqiBg(mContext, Integer.valueOf(aqi)));
-														CONST.data.aqi = aqi;
-													}
-												}
-											}
-										}
-									}
+					}
 
-									if (!obj.isNull("observe")) {
-										JSONObject obObj = new JSONObject(obj.getString("observe"));
-										if (!obObj.isNull("l")) {
-											JSONObject lObj = new JSONObject(obObj.getString("l"));
-											if (!lObj.isNull("l5")) {
-												String weatherCode = WeatherUtil.lastValue(lObj.getString("l5"));
-												Drawable drawable = getResources().getDrawable(R.drawable.phenomenon_drawable);
-												drawable.setLevel(Integer.valueOf(weatherCode));
-												ivPhe.setBackground(drawable);
-											}
-											if (!lObj.isNull("l1")) {
-												String factTemp = WeatherUtil.lastValue(lObj.getString("l1"));
-												tvTemp.setText(factTemp);
-											}
-											String windDir = WeatherUtil.lastValue(lObj.getString("l4"));
-											String windSpeed = WeatherUtil.lastValue(lObj.getString("l11"));
-											tvFactWind.setText(getString(WeatherUtil.getWindDirection(Integer.valueOf(windDir))) + " " + windSpeed+getString(R.string.unit_speed));
-										}
-
-									}
-
-									if (!obj.isNull("discript")) {
-										JSONObject disObj = new JSONObject(obj.getString("discript"));
-										String dis1 = disObj.getString("1");
-										String dis2 = disObj.getString("2");
-										String dis3 = disObj.getString("3");
-										if (dis1 != null && dis3 != null) {
-											tvDes.setText(dis1+":"+dis3);
-										}
-										CONST.data.dis1 = dis1;
-										CONST.data.dis2 = dis2;
-										CONST.data.dis3 = dis3;
-									}
-
-									if (!obj.isNull("forecast")) {
-										CONST.data.windList.clear();
-										JSONArray foreArray = obj.getJSONArray("forecast");
-										for (int i = 0; i < foreArray.length(); i+=3) {
-											JSONObject foreObj = foreArray.getJSONObject(i);
-											if (i == 0) {
-												if (!foreObj.isNull("speed")) {
-													String speed = foreObj.getString("speed");
-													if (!TextUtils.isEmpty(speed)) {
-														BigDecimal bd = new BigDecimal(Float.valueOf(speed));
-														float value = bd.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
-														CONST.data.speed = String.valueOf(value);
-													}
-												}
-												if (!foreObj.isNull("level")) {
-													CONST.data.force = foreObj.getString("level");
-												}
-												if (!foreObj.isNull("dirdes")) {
-													CONST.data.dir = foreObj.getString("dirdes");
-												}
-
-												if (CONST.data.speed != null && CONST.data.force != null && CONST.data.dir != null) {
-													tvWind.setText(CONST.data.speed+getString(R.string.unit_speed)+" "+CONST.data.force+getString(R.string.level)
-															+"\n"+CONST.data.dir);
-												}
-											}
-
-											WeatherData dto = new WeatherData();
-											if (!foreObj.isNull("speed")) {
-												dto.speed = foreObj.getString("speed");
-											}
-											if (!foreObj.isNull("date")) {
-												dto.date = foreObj.getString("date");
-											}
-											CONST.data.windList.add(dto);
-										}
-									}
-
-									if (!obj.isNull("kqwr")) {
-										JSONObject kqObj = new JSONObject(obj.getString("kqwr"));
-										CONST.data.clearPollution();
-										if (!kqObj.isNull("024")) {
-											String today = kqObj.getString("024");
-											if (!TextUtils.isEmpty(today)) {
-												CONST.data.today = Integer.valueOf(today)-61;
-											}
-										}
-										if (!kqObj.isNull("048")) {
-											String tommorow = kqObj.getString("048");
-											if (!TextUtils.isEmpty(tommorow)) {
-												CONST.data.tommorow = Integer.valueOf(tommorow)-61;
-											}
-										}
-										if (!kqObj.isNull("072")) {
-											String after = kqObj.getString("072");
-											if (!TextUtils.isEmpty(after)) {
-												CONST.data.afterTomm = Integer.valueOf(after)-61;
-											}
-										}
-									}
-
-									llMarkView.setVisibility(View.VISIBLE);
-									isCanClick = true;
-									llFact.setVisibility(View.VISIBLE);
-									leftBar.setVisibility(View.GONE);
-									progressBar.setVisibility(View.GONE);
-								}
-							} catch (JSONException e1) {
-								e1.printStackTrace();
-							}
+					@Override
+					public void onResponse(Call call, Response response) throws IOException {
+						if (!response.isSuccessful()) {
+							return;
 						}
+						final String result = response.body().string();
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								if (!TextUtils.isEmpty(result)) {
+									try {
+										JSONObject obj = new JSONObject(result);
+										if (obj != null) {
+											if (!obj.isNull("air")) {
+												JSONObject airObj = new JSONObject(obj.getString("air"));
+												if (!airObj.isNull("k")) {
+													JSONObject kObj = new JSONObject(airObj.getString("k"));
+													if (!kObj.isNull("k3")) {
+														if (tvAqi != null) {
+															String aqi = WeatherUtil.lastValue(kObj.getString("k3"));
+															if (!TextUtils.isEmpty(aqi)) {
+																tvAqi.setText(aqi + " " + WeatherUtil.getAqi(mContext, Integer.valueOf(aqi)));
+																tvAqi.setBackgroundResource(WeatherUtil.getAqiBg(mContext, Integer.valueOf(aqi)));
+																CONST.data.aqi = aqi;
+															}
+														}
+
+														if (tvFactAqi != null) {
+															String aqi = WeatherUtil.lastValue(kObj.getString("k3"));
+															if (!TextUtils.isEmpty(aqi)) {
+																tvFactAqi.setText(aqi);
+																tvFactAqi.setBackgroundResource(WeatherUtil.getAqiBg(mContext, Integer.valueOf(aqi)));
+																CONST.data.aqi = aqi;
+															}
+														}
+													}
+												}
+											}
+
+											if (!obj.isNull("observe")) {
+												JSONObject obObj = new JSONObject(obj.getString("observe"));
+												if (!obObj.isNull("l")) {
+													JSONObject lObj = new JSONObject(obObj.getString("l"));
+													if (!lObj.isNull("l5")) {
+														String weatherCode = WeatherUtil.lastValue(lObj.getString("l5"));
+														Drawable drawable = getResources().getDrawable(R.drawable.phenomenon_drawable);
+														drawable.setLevel(Integer.valueOf(weatherCode));
+														ivPhe.setBackground(drawable);
+													}
+													if (!lObj.isNull("l1")) {
+														String factTemp = WeatherUtil.lastValue(lObj.getString("l1"));
+														tvTemp.setText(factTemp);
+													}
+													String windDir = WeatherUtil.lastValue(lObj.getString("l4"));
+													String windSpeed = WeatherUtil.lastValue(lObj.getString("l11"));
+													tvFactWind.setText(getString(WeatherUtil.getWindDirection(Integer.valueOf(windDir))) + " " + windSpeed+getString(R.string.unit_speed));
+												}
+
+											}
+
+											if (!obj.isNull("discript")) {
+												JSONObject disObj = new JSONObject(obj.getString("discript"));
+												String dis1 = disObj.getString("1");
+												String dis2 = disObj.getString("2");
+												String dis3 = disObj.getString("3");
+												if (dis1 != null && dis3 != null) {
+													tvDes.setText(dis1+"\n"+dis3);
+												}
+												CONST.data.dis1 = dis1;
+												CONST.data.dis2 = dis2;
+												CONST.data.dis3 = dis3;
+											}
+
+											if (!obj.isNull("forecast")) {
+												CONST.data.windList.clear();
+												JSONArray foreArray = obj.getJSONArray("forecast");
+												for (int i = 0; i < foreArray.length(); i+=3) {
+													JSONObject foreObj = foreArray.getJSONObject(i);
+													if (i == 0) {
+														if (!foreObj.isNull("speed")) {
+															String speed = foreObj.getString("speed");
+															if (!TextUtils.isEmpty(speed)) {
+																BigDecimal bd = new BigDecimal(Float.valueOf(speed));
+																float value = bd.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
+																CONST.data.speed = String.valueOf(value);
+															}
+														}
+														if (!foreObj.isNull("level")) {
+															CONST.data.force = foreObj.getString("level");
+														}
+														if (!foreObj.isNull("dirdes")) {
+															CONST.data.dir = foreObj.getString("dirdes");
+														}
+
+														if (CONST.data.speed != null && CONST.data.force != null && CONST.data.dir != null) {
+															tvWind.setText(CONST.data.speed+getString(R.string.unit_speed)+" "+CONST.data.force+getString(R.string.level)+"\n"+CONST.data.dir);
+														}
+													}
+
+													WeatherData dto = new WeatherData();
+													if (!foreObj.isNull("speed")) {
+														dto.speed = foreObj.getString("speed");
+													}
+													if (!foreObj.isNull("date")) {
+														dto.date = foreObj.getString("date");
+													}
+													CONST.data.windList.add(dto);
+												}
+											}
+
+											if (!obj.isNull("kqwr")) {
+												JSONObject kqObj = new JSONObject(obj.getString("kqwr"));
+												CONST.data.clearPollution();
+												if (!kqObj.isNull("024")) {
+													String today = kqObj.getString("024");
+													if (!TextUtils.isEmpty(today)) {
+														CONST.data.today = Integer.parseInt(today);
+													}
+												}
+												if (!kqObj.isNull("048")) {
+													String tommorow = kqObj.getString("048");
+													if (!TextUtils.isEmpty(tommorow)) {
+														CONST.data.tommorow = Integer.parseInt(tommorow);
+													}
+												}
+												if (!kqObj.isNull("072")) {
+													String after = kqObj.getString("072");
+													if (!TextUtils.isEmpty(after)) {
+														CONST.data.afterTomm = Integer.parseInt(after);
+													}
+												}
+											}
+
+											llMarkView.setVisibility(View.VISIBLE);
+											isCanClick = true;
+											llFact.setVisibility(View.VISIBLE);
+											leftBar.setVisibility(View.GONE);
+											progressBar.setVisibility(View.GONE);
+										}
+									} catch (JSONException e1) {
+										e1.printStackTrace();
+									}
+								}
+							}
+						});
 					}
 				});
 			}
-		});
+		}).start();
 	}
 
 	@Override

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="您目前身处大丰区"
+        android:text="您目前身处大风区"
         android:textColor="@color/title_bg"
         android:textSize="@dimen/level_3" />
 

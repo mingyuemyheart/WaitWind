@@ -50,7 +50,7 @@ public class SpeedForecastFragment extends Fragment{
 			tvDis2.setText(CONST.data.dis2);
 		}
 		if (CONST.data.dis1 != null && CONST.data.dis3 != null) {
-			tvDes.setText(CONST.data.dis1+":"+CONST.data.dis3);
+			tvDes.setText(CONST.data.dis1+"\n"+CONST.data.dis3);
 		}
 		tvPosition.setText(CONST.data.position);
 		

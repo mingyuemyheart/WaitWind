@@ -3,11 +3,6 @@ package com.waitwind.view;
 /**
  * 绘制平滑曲线
  */
-import java.math.BigDecimal;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -27,12 +22,18 @@ import com.waitwind.R;
 import com.waitwind.dto.WeatherData;
 import com.waitwind.utils.CommonUtil;
 
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
 public class WindForeView extends View{
 	
-	private Context mContext = null;
+	private Context mContext;
 	private SimpleDateFormat sdf0 = new SimpleDateFormat("yyyyMMddHH");
 	private SimpleDateFormat sdf1 = new SimpleDateFormat("HH");
-	private List<WeatherData> tempList = new ArrayList<WeatherData>();
+	private List<WeatherData> tempList = new ArrayList<>();
 	private float maxTemp = 0;//最高温度
 	private float minTemp = 0;//最低温度
 	private Paint lineP = null;//画线画笔

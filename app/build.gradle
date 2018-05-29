@@ -36,6 +36,7 @@ android {
             outputFileName = "WaitWind" + "_" + "${defaultConfig.versionCode}" + "_V" + "${defaultConfig.versionName}" + "_" + buildType.name + ".apk"
         }
     }
+
 }
 
 dependencies {
