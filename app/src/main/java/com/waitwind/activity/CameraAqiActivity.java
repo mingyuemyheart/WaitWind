@@ -61,7 +61,7 @@ public class CameraAqiActivity extends BaseActivity implements OnClickListener{
 	private TextView tvAqiText = null;//aqi等级描述
 	private LinearLayout llCamera = null;//拍照按钮
 	private ImageView imageView = null;
-	private String url = "http://61.4.184.29/pm25AndVis/VisPmForApp.php";//图片上传接口
+	private String url = "http://new.scapi.tianqi.cn/pm25AndVis/VisPmForApp.php";//图片上传接口
 	private TextView tvAqi = null;
 	private TextView tvVisible = null;
 	private ProgressBar progressBar = null;
